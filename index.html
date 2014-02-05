@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./style.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="./SieveOfEratosthenes.js"></script>
+</head>
+<body>
+	<a class="header" href="./"><h1>Sieve of Eratosthenes</h1></a>
+	<div class="credit"><small>Made by <a target="_blank" href="http://www.dzautner.com">Daniel Zautner</a></small></div>
+	<div class="sieve">
+		<label for="n">Find all the primes between 2 and </label>
+		<input value="1200" name="n" /><br/>
+		<button>Run!</button>
+	</div>
+</body>
+<script type="text/javascript">
+$('.sieve button').click(function() { 
+	new SieveOfEratosthenes(
+		$('.sieve input').val()|0,
+		$('.sieve')
+	);
+})
+</script>
+</html>
